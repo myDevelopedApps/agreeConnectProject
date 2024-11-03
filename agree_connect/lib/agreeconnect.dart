@@ -1,9 +1,10 @@
 //import 'package:expence_manager_ui_ux/todo_model.dart';
-import 'dart:ffi';
+//import 'dart:ffi';
 
 import 'package:expence_manager_ui_ux/formerScreen.dart';
 import 'package:expence_manager_ui_ux/model_agreeConnect.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 //import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -470,7 +471,15 @@ class _ExpenceManagerAppUIState extends State {
                                           decoration: BoxDecoration(
                                             borderRadius:
                                                 BorderRadius.circular(20),
-                                               color:  Color.fromARGB(255, 197, 239, 198),
+                                                gradient:const  LinearGradient
+                                                (begin:Alignment.topCenter,
+                                                end:Alignment.bottomCenter,
+                                                colors: [
+                                                  Color.fromARGB(255, 136, 231, 140),
+                                                  Color.fromARGB(255, 227, 213, 90)
+                                                ] 
+                                                ),
+                                               //color:  const Color.fromARGB(255, 197, 239, 198),
                                             // color: const Color.fromARGB(
                                             //     255, 221, 231, 235),
                                             //color: Colors.white,
@@ -585,7 +594,7 @@ class _ExpenceManagerAppUIState extends State {
                                                         ),
                                                       ),
 
-                                                        Spacer(),
+                                                       const  Spacer(),
                                                         Container(
                                                           height: 36,
                                                           width: 36,
